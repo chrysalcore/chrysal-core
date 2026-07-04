@@ -1,4 +1,4 @@
-type Project = {
+export type Project = {
     img: `${string}.webp`
     icon: `${string}.svg` | ``
     name: string

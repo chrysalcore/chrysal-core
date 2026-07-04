@@ -1,4 +1,4 @@
-type Section = "problems" | "advantages" | "services" | "process" | "projects" | "faq" | "contact"
+export type Section = "problems" | "advantages" | "services" | "process" | "projects" | "faq" | "contact"
 
 type SectionData = {
     [key in Section]: {

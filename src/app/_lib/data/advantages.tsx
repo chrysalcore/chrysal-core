@@ -1,4 +1,4 @@
-type Advantage = {
+export type Advantage = {
     icon: React.ReactNode;
     title: string;
     desc: string;
