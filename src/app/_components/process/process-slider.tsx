@@ -1,26 +1,12 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
 import SlidersList from '@/components/slider/sliders-list';
 import Step from './process-step';
 import data from '@/app/_lib/data/process';
+import { useAutoSlider } from '@/hooks/use-auto-slider';
 
 export default function ProcessSlider() {
-    const [current, setCurrent] = useState(0);
-    const timeoutRef = useRef<number>(null);
-
-    useEffect(() => {
-        timeoutRef.current = window.setTimeout(() => {
-            setCurrent((prev) => (prev === data.length - 1 ? 0 : prev + 1));
-        }, 10000);
-
-        return () => {
-            if (timeoutRef.current !== null) {
-                window.clearTimeout(timeoutRef.current);
-            }
-        };
-    }, [current]);
-
+    const current = useAutoSlider(data.length, 10000);
     const item = data[current];
 
     return (
