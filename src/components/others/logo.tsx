@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-function Logo() {
+function Logo({ className = 'w-6 h-6' }: { className?: string }) {
     return (
-        <Link href='/' aria-label='home logo' className='logo-container'>
-            <Image loading='lazy' className='logo' src={'/icons/logo.svg'} alt="main logo" width={64} height={65} />
+        <Link href='/' aria-label='home logo' className='flex items-center'>
+            <Image loading='lazy' className={className} src={'/icons/logo.svg'} alt="main logo" width={64} height={65} />
         </Link>
     )
 }

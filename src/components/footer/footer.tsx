@@ -3,7 +3,7 @@ import FooterRights from "./footer-rights";
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="flex flex-col items-center gap-16 py-24 px-4 bg-domain">
             <FooterContent />
             <FooterRights />
         </footer>
