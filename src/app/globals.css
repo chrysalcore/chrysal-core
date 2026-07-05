@@ -1,26 +1,32 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: #ffbf00;
+  --color-domain: #111;
+  --color-dark: #1a1a1a;
+  --color-text: #ffb;
+  --color-light: #ffbd;
+  --color-cta: #ffa500;
+
+  --font-sans: var(--font-work-sans);
+  --font-heading: var(--font-montserrat);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--color-text);
+  background: linear-gradient(#050505, #05050544, #050505), url('/imgs/bg-small-hero.webp');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: linear-gradient(#050505, #05050544, #050505), url('/imgs/bg-big-hero.webp');
+  }
 }

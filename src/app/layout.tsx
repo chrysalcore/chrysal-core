@@ -1,10 +1,21 @@
 import type { Metadata } from "next";
+import { Work_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/header/header";
 import Hero from "@/components/hero/hero";
 import Banner from "@/components/banner/banner";
 import Footer from "@/components/footer/footer";
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  variable: "--font-work-sans",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  variable: "--font-montserrat",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="h-full antialiased"
+      className={`h-full antialiased ${workSans.variable} ${montserrat.variable}`}
     >
       <body className="min-h-full flex flex-col">
         <>
