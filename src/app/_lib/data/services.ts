@@ -1,4 +1,4 @@
-type Service = {
+export type Service = {
     img: string
     name: string
     chars: string[]

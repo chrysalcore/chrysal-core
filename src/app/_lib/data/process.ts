@@ -1,4 +1,4 @@
-type ProcessStep = {
+export type ProcessStep = {
     step: number
     name: string
     desc: string

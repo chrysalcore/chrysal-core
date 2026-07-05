@@ -1,4 +1,11 @@
-const data = [
+export type Problem = {
+    icon: React.ReactElement;
+    name: string;
+    deficiency: string;
+    impact: string;
+};
+
+const data: Problem[] = [
     {
         icon: (
             <svg className="problem-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 234.68 192.47">
