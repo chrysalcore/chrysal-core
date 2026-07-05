@@ -3,7 +3,7 @@ import data from "../../_lib/data/advantages"
 
 function AdvantagesList() {
     return (
-        <ul className="advantages-list">
+        <ul className="flex flex-wrap gap-6">
             {data.map(item => <Advantage {...item} key={item.title} />)}
         </ul>
     )
