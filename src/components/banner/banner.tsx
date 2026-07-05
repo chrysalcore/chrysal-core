@@ -2,7 +2,7 @@ import SocialLinks from '../others/social-links'
 
 function Banner() {
     return (
-        <section className="header-social">
+        <section className="flex flex-wrap">
             <SocialLinks />
         </section>
     )

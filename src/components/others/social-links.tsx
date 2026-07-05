@@ -1,16 +1,11 @@
 import contactInfo from '@/lib/data/contactInfo'
 
 function SocialLinks() {
-    const style = {
-        fill: '#ffbf00',
-        strokeWidth: 0
-    }
-
     return (
-        <ul className="social-links">
+        <ul className="grow shrink-0 basis-[min(15rem,100%)] flex justify-center items-center gap-12 py-4 px-2 bg-domain">
             {contactInfo.map((item) => (
-                <li key={item.name} className="social-link fill-amber-400 stroke-0">
-                    <a href={item.href} aria-label={item.name} target="__blank" referrerPolicy="no-referrer" className="social-link__link">
+                <li key={item.name} className="w-6 h-6 fill-primary stroke-0">
+                    <a href={item.href} aria-label={item.name} target="_blank" rel="noopener noreferrer">
                         {item.icon}
                     </a>
                 </li>
