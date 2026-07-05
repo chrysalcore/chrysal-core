@@ -3,7 +3,7 @@ import Link from "next/link"
 function HeroCTA() {
     return (
         <div className="flex items-center">
-            <Link href="/projects" className="py-2 px-8 text-sm font-semibold uppercase tracking-widest bg-cta rounded">View Examples</Link>
+            <Link href="/projects" className="py-2 px-8 text-sm font-semibold uppercase tracking-widest text-primary bg-transparent border border-primary rounded">View Examples</Link>
         </div>
     )
 }
