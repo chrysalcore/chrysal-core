@@ -1,4 +1,4 @@
-export interface Input {
+export interface Field {
     label: string
     name: string
     type: string
@@ -8,7 +8,7 @@ export interface Input {
     defaultValue?: string
 }
 
-const data: Input[] = [
+const data: Field[] = [
     {
         label: 'Name',
         name: 'name',
