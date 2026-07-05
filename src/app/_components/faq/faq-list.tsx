@@ -12,7 +12,7 @@ export default function FAQList() {
     };
 
     return (
-        <ul className="faq-list">
+        <ul className="flex flex-wrap justify-center items-start gap-6">
             {data.map((item) => (
                 <FAQItem {...item} key={item.id} onSelect={onSelect} isActive={selectedId === item.id} />
             ))}
