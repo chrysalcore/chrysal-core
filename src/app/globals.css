@@ -30,3 +30,41 @@ body {
     background-image: linear-gradient(#050505, #05050544, #050505), url('/imgs/bg-big-hero.webp');
   }
 }
+
+.bg-hero-fade {
+  background-image: linear-gradient(var(--color-domain), transparent 20%, transparent 80%, var(--color-domain));
+}
+
+.bg-fade-domain {
+  background-image: linear-gradient(var(--color-domain), transparent, var(--color-domain));
+}
+
+.bg-fade-domain-right {
+  background-image: linear-gradient(var(--color-domain), transparent, var(--color-domain)), linear-gradient(to right, var(--color-domain), #333);
+}
+
+.bg-fade-domain-left {
+  background-image: linear-gradient(var(--color-domain), transparent, var(--color-domain)), linear-gradient(to left, var(--color-domain), #333);
+}
+
+.bg-fade-domain-right-dark {
+  background-image: linear-gradient(var(--color-domain), transparent, var(--color-domain)), linear-gradient(to right, var(--color-domain), var(--color-dark));
+}
+
+@keyframes fade {
+  0% { transform: translateX(15rem); opacity: 0; }
+  5% { transform: translateX(0); opacity: 1; }
+  95% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-15rem); opacity: 0; }
+}
+
+@keyframes fade-step {
+  0% { transform: translateX(15rem); opacity: 0; }
+  10% { transform: translateX(0); opacity: 1; }
+  90% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(-15rem); opacity: 0; }
+}
+
+.shadow-card {
+  box-shadow: 0 0 0.5rem #000;
+}
