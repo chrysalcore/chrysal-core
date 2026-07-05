@@ -1,21 +1,22 @@
 import type { MetadataRoute } from 'next';
+import { siteUrl } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const lastModified = new Date();
 
     return [
         {
-            url: 'https://chrysalcore.com/',
+            url: `${siteUrl}/`,
             lastModified,
             priority: 0.9,
         },
         {
-            url: 'https://chrysalcore.com/projects',
+            url: `${siteUrl}/projects`,
             lastModified,
             priority: 1,
         },
         {
-            url: 'https://chrysalcore.com/contact',
+            url: `${siteUrl}/contact`,
             lastModified,
             priority: 0.8,
         },

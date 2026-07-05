@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Work_Sans, Montserrat } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
+import { siteUrl } from "@/lib/site";
 import Header from "@/components/header/header";
 import Hero from "@/components/hero/hero";
 import Banner from "@/components/banner/banner";
 import Footer from "@/components/footer/footer";
+
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -23,7 +28,7 @@ const description =
   "High-speed websites with extensive customization and support focused on small businesses and startups. We focus on ensuring a successful online presence for local businesses, guaranteeing the best possible ranking.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://chrysalcore.com"),
+  metadataBase: new URL(siteUrl),
   title: {
     default: title,
     template: "%s | Chrysal Core",
@@ -49,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Chrysal Core",
     description,
-    url: "https://chrysalcore.com",
+    url: siteUrl,
     siteName: "Chrysal Core",
     type: "website",
   },
@@ -76,18 +81,24 @@ export default function RootLayout({
           <Footer />
         </>
       </body>
-      <Script
-        src="https://www.googletagmanager.com/gtag/js?id=G-DE1D7NF5FM"
-        strategy="afterInteractive"
-      />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-DE1D7NF5FM');
-        `}
-      </Script>
+      {gaId ? (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+            strategy="afterInteractive"
+          />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}');
+            `}
+          </Script>
+        </>
+      ) : null}
+      <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
