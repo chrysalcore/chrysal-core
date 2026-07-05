@@ -1,7 +1,9 @@
+import Image from 'next/image';
+
 function HeroImage() {
     return (
-        <picture className="hero-picture">
-            <img className="hero-picture__img" loading="lazy" src={new URL('../../../assets/icons/hero.svg', import.meta.url).href} alt="hero image" />
+        <picture className="hidden lg:flex justify-center items-center">
+            <Image className="w-100" loading="lazy" src="/icons/hero.svg" alt="hero image" width={458} height={457} />
         </picture>
     )
 }

@@ -1,15 +1,17 @@
 import Title from './title';
 import Slogan from './slogan';
 import HeroCTA from './hero-cta';
+import HeroImage from './hero-image';
 
 function Hero() {
     return (
-        <section className="hero">
-            <section className="hero-content">
+        <section className="flex justify-center items-center min-h-dvh p-4 text-center lg:justify-between lg:px-[10dvw] lg:py-4 lg:text-left bg-hero-fade">
+            <section className="flex flex-col justify-center items-center lg:items-start gap-12 max-w-120 h-140">
                 <Title />
                 <Slogan />
                 <HeroCTA />
             </section>
+            <HeroImage />
         </section>
     )
 }
