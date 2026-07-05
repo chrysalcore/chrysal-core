@@ -4,15 +4,15 @@ import data from "@/lib/data/sections";
 
 function Projects() {
     return (
-        <section className="projects section">
+        <section className="flex flex-col items-center gap-20 py-24 text-center overflow-x-clip bg-fade-domain-right-dark">
             <SectionHeader {...data.projects} />
-            <ul className="projects-main">
-                <li className="projects-content">
-                    <h3 className="projects__title">Live Webs</h3>
+            <ul className="flex flex-col gap-20">
+                <li className="flex flex-col gap-8">
+                    <h3 className="self-center p-4 w-4/5 text-primary text-2xl border-b border-primary">Live Webs</h3>
                     <ProjectsList end={3} />
                 </li>
-                <li className="projects-content">
-                    <h3 className="projects__title">Templates</h3>
+                <li className="flex flex-col gap-8">
+                    <h3 className="self-center p-4 w-4/5 text-primary text-2xl border-b border-primary">Templates</h3>
                     <ProjectsList init={4} />
                 </li>
             </ul>
