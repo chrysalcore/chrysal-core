@@ -24,8 +24,14 @@ const description =
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://chrysalcore.com"),
-  title,
+  title: {
+    default: title,
+    template: "%s | Chrysal Core",
+  },
   description,
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "digital presence",
     "local optimization",

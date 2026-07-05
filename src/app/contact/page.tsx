@@ -1,7 +1,16 @@
+import type { Metadata } from 'next';
 import SectionHeader from '@/components/main/section-header';
 import sections from '@/lib/data/sections';
 import ContactInfo from './_components/contact-info';
 import Form from './_components/form';
+
+export const metadata: Metadata = {
+    title: sections.contact.title,
+    description: sections.contact.desc,
+    alternates: {
+        canonical: '/contact',
+    },
+};
 
 export default function ContactPage() {
     return (

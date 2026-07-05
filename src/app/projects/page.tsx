@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import SectionHeader from "@/components/main/section-header";
 import ProjectsList from "./_components/projects-list";
 import data from "@/lib/data/sections";
+
+export const metadata: Metadata = {
+    title: data.projects.title,
+    description: data.projects.desc,
+    alternates: {
+        canonical: "/projects",
+    },
+};
 
 function Projects() {
     return (
