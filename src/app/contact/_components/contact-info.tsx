@@ -5,11 +5,11 @@ type ContactInfoItem = (typeof data)[number];
 
 function ContactItem({ icon, name, text, href }: ContactInfoItem) {
     return (
-        <li className="contact-item">
-            <div className="contact-item__img">{icon}</div>
-            <Link href={href} rel="noopener noreferrer" target="_blank" className="contact-item__link">
-                <h3 className="contact-item__name">{name}</h3>
-                <p className="contact-item__ref">{text}</p>
+        <li className="grow shrink-0 basis-[min(12rem,100%)] flex gap-2">
+            <div className="w-12 h-12 p-3 bg-primary rounded">{icon}</div>
+            <Link href={href} rel="noopener noreferrer" target="_blank">
+                <h3 className="text-base">{name}</h3>
+                <p className="text-primary text-sm">{text}</p>
             </Link>
         </li>
     );
@@ -17,9 +17,9 @@ function ContactItem({ icon, name, text, href }: ContactInfoItem) {
 
 export default function ContactInfo({ children }: { children: React.ReactNode }) {
     return (
-        <div className="contact-info">
+        <div className="grow shrink-0 basis-[min(15rem,100%)] flex flex-col gap-20">
             {children}
-            <ul className="contact-list">
+            <ul className="flex flex-wrap gap-4">
                 {data.map((item) => (
                     <ContactItem {...item} key={item.name} />
                 ))}
