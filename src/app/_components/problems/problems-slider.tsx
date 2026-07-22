@@ -11,7 +11,7 @@ export default function ProblemsSlider() {
 
     return (
         <article className="flex flex-col items-center gap-12 max-w-80 overflow-x-visible">
-            <Problem {...item} />
+            <Problem key={current} {...item} />
             <SlidersList current={current} size={data.length} />
         </article>
     )

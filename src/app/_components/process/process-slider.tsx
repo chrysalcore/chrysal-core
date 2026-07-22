@@ -11,7 +11,7 @@ export default function ProcessSlider() {
 
     return (
         <article className="flex flex-col items-center gap-12 w-full max-w-100 lg:max-w-80 overflow-x-visible">
-            <Step {...item} />
+            <Step key={current} {...item} />
             <SlidersList current={current} size={data.length} />
         </article>
     )
