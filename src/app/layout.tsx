@@ -10,6 +10,7 @@ import Header from "@/components/header/header";
 import Hero from "@/components/hero/hero";
 import Banner from "@/components/banner/banner";
 import Footer from "@/components/footer/footer";
+import BodyCTA from "@/components/others/body-cta";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -69,10 +70,12 @@ export default function RootLayout({
     <html
       lang="en"
       className={`h-full antialiased ${workSans.variable} ${montserrat.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
         <>
           <Header />
+          <BodyCTA />
           <main className="main">
             <Hero />
             <Banner />

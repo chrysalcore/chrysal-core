@@ -10,6 +10,7 @@ function Header() {
             <Nav />
             <HeaderCTA />
             <AsideNav />
+            <div className="absolute top-0 left-0 w-full h-full bg-domain z-10"></div>
         </header>
     )
 }
