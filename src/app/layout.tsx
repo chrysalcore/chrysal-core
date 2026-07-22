@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Work_Sans, Montserrat } from "next/font/google";
-import Script from "next/script";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 import { siteUrl } from "@/lib/site";
@@ -11,6 +8,7 @@ import Hero from "@/components/hero/hero";
 import Banner from "@/components/banner/banner";
 import Footer from "@/components/footer/footer";
 import BodyCTA from "@/components/others/body-cta";
+import DeferredAnalytics from "@/components/others/deferred-analytics";
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
@@ -84,24 +82,7 @@ export default function RootLayout({
           <Footer />
         </>
       </body>
-      {gaId ? (
-        <>
-          <Script
-            src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-            strategy="afterInteractive"
-          />
-          <Script id="google-analytics" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', '${gaId}');
-            `}
-          </Script>
-        </>
-      ) : null}
-      <Analytics />
-      <SpeedInsights />
+      <DeferredAnalytics gaId={gaId} />
     </html>
   );
 }
