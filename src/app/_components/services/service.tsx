@@ -5,20 +5,20 @@ import { type Service } from '@/app/_lib/data/services';
 export default function Service({ img, name, chars }: Service) {
     return (
         <li className="shrink-0 grow-0 basis-[min(18rem,90dvw)] flex flex-col gap-4 p-4 text-left bg-domain rounded-lg shadow-card snap-center">
-        <Image className="w-full max-w-72 aspect-video p-2 bg-[#222] rounded object-contain" loading="lazy" src={`/icons/${img}`} alt={`${name} image`} width={320} height={180} />
-        <div className="flex flex-col gap-4">
-            <h3 className="text-primary">{name}</h3>
-            <ul className="flex flex-col gap-2 p-6 list-disc">
-                {chars.map((char) => (
-                    <li className="text-sm" key={char}>
-                    {char}
-                    </li>
-                ))}
-            </ul>
-        </div>
-        <Link href="/contact" className="self-start max-w-[70dvw] text-domain cursor-pointer py-2 px-8 text-sm font-semibold uppercase tracking-widest bg-cta rounded">
-            Reserve Meet
-        </Link>
+            <Image className="w-full max-w-72 aspect-video p-2 bg-[#222] rounded object-contain" loading="lazy" src={`/icons/${img}`} alt={`${name} image`} width={320} height={180} />
+            <div className="flex flex-col gap-4">
+                <h3 className="text-primary">{name}</h3>
+                <ul className="flex flex-col gap-2 p-6 list-disc">
+                    {chars.map((char) => (
+                        <li className="text-sm" key={char}>
+                        {char}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <Link href="/contact" className="self-start max-w-[70dvw] text-domain cursor-pointer py-2 px-8 text-sm font-semibold uppercase tracking-widest bg-cta rounded">
+                Reserve Meet
+            </Link>
         </li>
     );
 }

@@ -4,7 +4,7 @@ import { type FAQItem } from '@/app/_lib/data/faqs';
 export default function FAQItem({ id, question, answer, isActive, onSelect }: FAQItem & { isActive: boolean; onSelect: (id: number) => void }) {
     return (
     <li className="shrink-0 grow-0 basis-[min(18rem,100%)] flex flex-col gap-6 p-4 max-w-80 bg-dark rounded-lg shadow-card relative">
-        <button className="w-[90%] text-cta text-base text-left bg-transparent border-none" onClick={() => onSelect(id)}>
+        <button className="self-stretch w-[90%] text-cta text-base text-left bg-transparent border-none" onClick={() => onSelect(id)}>
             {question}
         </button>
         <Image
