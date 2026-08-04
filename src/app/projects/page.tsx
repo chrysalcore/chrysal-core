@@ -17,11 +17,11 @@ function Projects() {
             <SectionHeader {...data.projects} />
             <ul className="flex flex-col gap-20">
                 <li className="flex flex-col gap-8">
-                    <h3 className="self-center p-4 w-4/5 text-primary text-2xl border-b border-primary">Live Webs</h3>
+                    <h3 className="self-center p-4 w-4/5 text-primary text-2xl font-bold border-b border-primary">Live Webs</h3>
                     <ProjectsList end={3} />
                 </li>
                 <li className="flex flex-col gap-8">
-                    <h3 className="self-center p-4 w-4/5 text-primary text-2xl border-b border-primary">Templates</h3>
+                    <h3 className="self-center p-4 w-4/5 text-primary text-2xl font-bold border-b border-primary">Templates</h3>
                     <ProjectsList init={4} />
                 </li>
             </ul>

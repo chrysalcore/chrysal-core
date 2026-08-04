@@ -6,7 +6,7 @@ export default function Problem({ icon, name, deficiency, impact }: Problem) {
         <div className="animate-[fade_15s_linear_both] flex flex-col gap-6 p-6 min-w-[min(18rem,100%)] min-h-80 bg-dark rounded-lg shadow-card">
             <header className="flex flex-col items-center gap-2">
                 <div className="w-12 h-12 fill-primary">{icon}</div>
-                <h3 className="text-primary">{name}</h3>
+                <h3 className="text-primary font-bold">{name}</h3>
             </header>
             <div className="flex flex-col items-center">
                 <p className="text-sm">{deficiency}</p>

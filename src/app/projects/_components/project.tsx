@@ -9,7 +9,7 @@ export default function Project({ img, icon, name, desc, href }: Project) {
             <div className="flex flex-col gap-4 p-4 pb-16 h-full relative">
                 <header className="flex items-center gap-4">
                     {icon ? <Image loading="lazy" className="w-8 h-8" src={`/icons/${icon}`} alt="" width={64} height={64} /> : null}
-                    <h3 className="truncate">{name}</h3>
+                    <h3 className="truncate font-bold">{name}</h3>
                 </header>
                 <p className="text-sm">{desc}</p>
                 {href !== '' ? (
