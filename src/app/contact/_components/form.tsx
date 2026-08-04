@@ -42,7 +42,7 @@ export default function Form() {
         {fixedData.map((item) => (
             <Field {...item} key={item.name} />
         ))}
-        <button className="py-2 px-8 text-sm font-semibold uppercase tracking-widest bg-cta rounded" type="submit">
+        <button className="py-2 px-8 text-sm font-semibold uppercase tracking-widest text-domain bg-cta rounded" type="submit">
             Submit
         </button>
         </form>
