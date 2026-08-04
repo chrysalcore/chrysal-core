@@ -1,7 +1,6 @@
 import Title from './title';
 import Slogan from './slogan';
 import HeroCTA from './hero-cta';
-import HeroImage from './hero-image';
 
 function Hero() {
     return (
@@ -11,7 +10,6 @@ function Hero() {
                 <Slogan />
                 <HeroCTA />
             </section>
-            <HeroImage />
         </section>
     )
 }
