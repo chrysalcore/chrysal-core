@@ -106,8 +106,8 @@ Follow these steps to run the project on your local machine.
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/chrysalcore/chrysalcore.git
-    cd chrysalcore
+    git clone https://github.com/chrysalcore/chrysal-core.git
+    cd chrysal-core
     ```
 
 2. **Install dependencies**
