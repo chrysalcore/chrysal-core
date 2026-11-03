@@ -8,10 +8,10 @@ export type Project = {
 
 const data: Project[] = [
     {
-        img: 'snals.webp',
+        img: 'sofi-nails.webp',
         icon: 'snals.svg',
         name: 'Sofi Nails & Lashes Spa',
-        desc: 'Welcome page created to increase reach and positioning on Google for the beauty salon Sofi Nails & Lashes Spa located in Salem, Virginia. It has been improved based on customer metrics and preferences with its owner. It has increased its positioning on Google, appearing in more than 1,500 searches in two months and gaining increasing visibility.',
+        desc: 'Website for a beauty salon in Salem, Virginia, built to be found on Google and to take bookings online. Since launch it has reached 1,600+ visitors, with organic search as its main source of traffic and daily search impressions up nearly 5x in a year. Redesigned in 2026 with a palette taken from the logo, readable contrast and a booking form that checks opening hours.',
         href: 'https://sofinailsandlashesspa.com'
     },
     {
@@ -22,24 +22,24 @@ const data: Project[] = [
         href: 'https://a3yreforms.com'
     },
     {
-        img: 'pilar.webp',
-        icon: 'pilar.svg',
-        name: 'Pilar Cleaning Services LLC',
-        desc: "This multi-page website was created to establish an online presence for Pilar Cleaning Services LLC, which serves Salem, Roanoke, Vinton, and surrounding areas in Virginia. Its development focused on SEO, local search optimization, fast page load times, and user experience.",
-        href: 'https://pilarcleaning.com'
+        img: 'cevateria.webp',
+        icon: '',
+        name: 'Cevateria Brasil',
+        desc: "Online store for Cevateria Brasil, a brand of barley capsules with chocolate. Rebuilt from a static site into a fast React app: customers add products to a cart that remembers them between visits and send the order straight to the brand's WhatsApp, the channel it already sells through.",
+        href: 'https://chrysalcore.github.io/cevateria_brasil'
     },
     {
-        img: 'moul.webp',
+        img: 'moulin-rouge.webp',
         icon: '',
         name: 'View All Pages',
         desc: "A section with all my completed projects and a variety of templates adaptable to your needs. Don't waste any more time and run to delight in each unique example we offer. You may find exactly what you're looking for. If not, contact us and we'll make your expectations a reality.",
         href: ''
     },
     {
-        img: 'moul.webp',
+        img: 'moulin-rouge.webp',
         icon: 'moul.svg',
         name: 'Moulin Rouge',
-        desc: 'Example site based on the legendary Moulin Rouge restaurant. It showcases an incredible contrast in its carefully chosen color palette, elegant and warm typography, and images that create a unique atmosphere—all with the aim of transporting the user to that wonderful dinner they should already book!',
+        desc: 'Demo restaurant site with menu, events, online ordering and table reservations. The menu and events load from an API and each one keeps working if the other fails, the cart persists across pages, and every change has to pass 53 automated tests before it is published.',
         href: 'https://chrysalcore.github.io/moulin-rouge'
     },
     {
