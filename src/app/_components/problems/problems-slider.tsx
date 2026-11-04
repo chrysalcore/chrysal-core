@@ -10,7 +10,7 @@ export default function ProblemsSlider() {
     const item = data[current];
 
     return (
-        <article className="flex flex-col items-center gap-12 max-w-80 overflow-x-visible">
+        <article className="flex flex-col items-start gap-12 w-full max-w-100 overflow-x-visible">
             <Problem key={current} {...item} />
             <SlidersList current={current} size={data.length} />
         </article>

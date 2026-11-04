@@ -1,20 +1,11 @@
-'use client';
-
-import { useState } from 'react';
 import data from '@/app/_lib/data/faqs';
 import FAQItem from './faq-item';
 
 export default function FAQList() {
-    const [selectedId, setSelectedId] = useState<number | null>(null);
-
-    const onSelect = (id: number) => {
-        setSelectedId((current) => (current === id ? null : id));
-    };
-
     return (
-        <ul className="flex flex-wrap justify-center items-start gap-6">
+        <ul className="grid md:grid-cols-2 gap-x-16 border-b border-divider">
             {data.map((item) => (
-                <FAQItem {...item} key={item.id} onSelect={onSelect} isActive={selectedId === item.id} />
+                <FAQItem {...item} key={item.id} />
             ))}
         </ul>
     );
