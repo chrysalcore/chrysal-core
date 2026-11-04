@@ -2,7 +2,7 @@
 
 import SlidersList from '@/components/slider/sliders-list';
 import Problem from './problem';
-import data from '@/app/_lib/data/problems';
+import data from '@/app/(site)/_lib/data/problems';
 import { useAutoSlider } from '@/hooks/use-auto-slider';
 
 export default function ProblemsSlider() {

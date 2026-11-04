@@ -1,4 +1,4 @@
-import { type Field } from '@/app/contact/_lib/data/fields';
+import { type Field } from '@/app/(site)/contact/_lib/data/fields';
 
 export default function Field({
     label,

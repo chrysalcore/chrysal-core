@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { type FAQItem } from '@/app/_lib/data/faqs';
+import { type FAQItem } from '@/app/(site)/_lib/data/faqs';
 
 export default function FAQItem({ question, answer }: FAQItem) {
     return (

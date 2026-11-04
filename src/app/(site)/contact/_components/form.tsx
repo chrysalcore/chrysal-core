@@ -3,7 +3,7 @@
 import { useMemo, useState } from 'react';
 import { Send } from 'lucide-react';
 import Field from './field';
-import formData from '@/app/contact/_lib/data/fields';
+import formData from '@/app/(site)/contact/_lib/data/fields';
 
 type FormState = {
     name: string;

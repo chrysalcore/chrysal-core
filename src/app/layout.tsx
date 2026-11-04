@@ -3,11 +3,6 @@ import { Work_Sans, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
 import { siteUrl } from '@/lib/site';
-import Header from '@/components/header/header';
-import Hero from '@/components/hero/hero';
-import Banner from '@/components/banner/banner';
-import Footer from '@/components/footer/footer';
-import BodyCTA from '@/components/others/body-cta';
 import DeferredAnalytics from '@/components/others/deferred-analytics';
 
 const gaId = process.env.NEXT_PUBLIC_GA_ID;
@@ -70,18 +65,7 @@ export default function RootLayout({
             className={`h-full antialiased ${workSans.variable} ${spaceGrotesk.variable}`}
             data-scroll-behavior="smooth"
         >
-            <body className="flex min-h-full flex-col">
-                <>
-                    <Header />
-                    <BodyCTA />
-                    <main className="main">
-                        <Hero />
-                        <Banner />
-                        {children}
-                    </main>
-                    <Footer />
-                </>
-            </body>
+            <body className="flex min-h-full flex-col">{children}</body>
             <DeferredAnalytics gaId={gaId} />
         </html>
     );

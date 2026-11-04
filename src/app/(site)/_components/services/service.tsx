@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { CalendarDays } from 'lucide-react';
-import { type Service } from '@/app/_lib/data/services';
+import { type Service } from '@/app/(site)/_lib/data/services';
 
 export default function Service({ img, name, chars }: Service) {
     return (

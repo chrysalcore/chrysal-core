@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react';
-import { type Problem } from '@/app/_lib/data/problems';
+import { type Problem } from '@/app/(site)/_lib/data/problems';
 
 export default function Problem({ icon: Icon, name, deficiency, impact }: Problem) {
     return (

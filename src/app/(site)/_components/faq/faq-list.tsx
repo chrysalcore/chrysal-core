@@ -1,4 +1,4 @@
-import data from '@/app/_lib/data/faqs';
+import data from '@/app/(site)/_lib/data/faqs';
 import FAQItem from './faq-item';
 
 export default function FAQList() {

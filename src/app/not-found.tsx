@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import SectionHeader from '@/components/main/section-header';
+import Logo from '@/components/others/logo';
 
 export default function NotFound() {
     return (
-        <section className="bg-fade-band-left flex flex-col items-center gap-12 px-4 py-32 lg:py-40">
+        <main className="bg-fade-band-left flex min-h-dvh flex-col items-center justify-center gap-12 px-4 py-16">
+            <div className="mb-12">
+                <Logo className="h-14 w-14" />
+            </div>
             <SectionHeader
                 eyebrow="Error 404"
                 title="Page Not Found"
@@ -14,6 +18,6 @@ export default function NotFound() {
                 Back to Home
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
-        </section>
+        </main>
     );
 }

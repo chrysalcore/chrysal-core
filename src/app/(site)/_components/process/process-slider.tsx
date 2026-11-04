@@ -2,7 +2,7 @@
 
 import SlidersList from '@/components/slider/sliders-list';
 import Step from './process-step';
-import data from '@/app/_lib/data/process';
+import data from '@/app/(site)/_lib/data/process';
 import { useAutoSlider } from '@/hooks/use-auto-slider';
 
 export default function ProcessSlider() {
