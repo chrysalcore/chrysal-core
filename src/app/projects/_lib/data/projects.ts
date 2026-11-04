@@ -29,7 +29,7 @@ const data: Project[] = [
         href: 'https://chrysalcore.github.io/cevateria_brasil'
     },
     {
-        img: 'moulin-rouge.webp',
+        img: 'all-projects.webp',
         icon: '',
         name: 'View All Pages',
         desc: "A section with all my completed projects and a variety of templates adaptable to your needs. Don't waste any more time and run to delight in each unique example we offer. You may find exactly what you're looking for. If not, contact us and we'll make your expectations a reality.",
