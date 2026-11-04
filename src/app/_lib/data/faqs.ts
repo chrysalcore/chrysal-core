@@ -7,7 +7,7 @@ export type FAQItem = {
 const data: FAQItem[] = [
     {
         id: 1,
-        question: '"Can you really deliver in 7 days?',
+        question: 'Can you really deliver in 7 days?',
         answer: 'Yes, we specialize in agile development for local businesses.'
     },
     {
