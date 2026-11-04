@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { CalendarDays } from 'lucide-react';
 import { type Service } from '@/app/_lib/data/services';
 
 export default function Service({ img, name, chars }: Service) {
@@ -16,6 +17,7 @@ export default function Service({ img, name, chars }: Service) {
                     ))}
                 </ul>
                 <Link href="/contact" className="self-start mt-auto max-w-[70dvw] button-accent">
+                    <CalendarDays className="w-4 h-4" aria-hidden="true" />
                     Reserve Meet
                 </Link>
             </div>

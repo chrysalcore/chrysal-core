@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { type Project } from '../_lib/data/projects';
 
 export default function Project({ img, icon, name, desc, href }: Project) {
@@ -15,10 +16,12 @@ export default function Project({ img, icon, name, desc, href }: Project) {
                 {href !== '' ? (
                     <Link className="absolute left-4 bottom-4 button-accent" href={href} target="_blank" rel="noopener noreferrer">
                         Visit
+                        <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                 ) : (
                     <Link className="absolute left-4 bottom-4 button-accent" href="/projects">
                         Visit
+                        <ArrowRight className="w-4 h-4" aria-hidden="true" />
                     </Link>
                 )}
             </div>

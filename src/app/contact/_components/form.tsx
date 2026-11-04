@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { Send } from 'lucide-react';
 import Field from './field';
 import formData from '@/app/contact/_lib/data/fields';
 
@@ -43,6 +44,7 @@ export default function Form() {
             <Field {...item} key={item.name} />
         ))}
         <button className="button-accent" type="submit">
+            <Send className="w-4 h-4" aria-hidden="true" />
             Submit
         </button>
         </form>
