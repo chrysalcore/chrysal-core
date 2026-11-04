@@ -6,7 +6,7 @@ export type Service = {
 
 const data: Service[] = [
     {
-        img: 'landing.svg',
+        img: 'service-landing.webp',
         name: 'High-Converting Landing Pages',
         chars: [
             '7-day delivery guaranteed',
@@ -16,7 +16,7 @@ const data: Service[] = [
         ]
     },
     {
-        img: 'website.svg',
+        img: 'service-website.webp',
         name: 'Complete Business Websites',
         chars: [
             '14-day delivery guaranteed',

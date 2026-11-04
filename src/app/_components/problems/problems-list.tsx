@@ -6,7 +6,7 @@ export default function ProblemsList() {
     return (
         <div className="flex justify-center items-center lg:justify-between">
             <ProblemsSlider />
-            <Image className="hidden lg:block w-[45%] aspect-square" loading="lazy" src="/icons/problem.svg" alt="problem img" width={400} height={400} />
+            <Image className="hidden lg:block w-[45%] aspect-square" loading="lazy" src="/imgs/problem-illustration.webp" alt="" width={1024} height={1024} sizes="45vw" />
         </div>
     );
 }
