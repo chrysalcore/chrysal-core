@@ -10,9 +10,9 @@ export default function ProcessSlider() {
     const item = data[current];
 
     return (
-        <article className="flex flex-col items-start gap-12 w-full max-w-100 overflow-x-visible">
+        <article className="flex w-full max-w-100 flex-col items-start gap-12 overflow-x-visible">
             <Step key={current} {...item} />
             <SlidersList current={current} size={data.length} />
         </article>
-    )
+    );
 }

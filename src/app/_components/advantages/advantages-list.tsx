@@ -1,12 +1,14 @@
-import Advantage from "./advantage"
-import data from "../../_lib/data/advantages"
+import Advantage from './advantage';
+import data from '../../_lib/data/advantages';
 
 function AdvantagesList() {
     return (
-        <ul className="grid md:grid-cols-2 gap-x-16">
-            {data.map(item => <Advantage {...item} key={item.title} />)}
+        <ul className="grid gap-x-16 md:grid-cols-2">
+            {data.map((item) => (
+                <Advantage {...item} key={item.title} />
+            ))}
         </ul>
-    )
+    );
 }
 
-export default AdvantagesList
+export default AdvantagesList;

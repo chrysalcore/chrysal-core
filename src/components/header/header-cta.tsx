@@ -1,15 +1,15 @@
-import Link from "next/link"
-import { MessageCircle } from "lucide-react"
+import Link from 'next/link';
+import { MessageCircle } from 'lucide-react';
 
 function HeaderCTA() {
     return (
-        <div className="hidden md:flex items-center z-20">
+        <div className="z-20 hidden items-center md:flex">
             <Link href="/contact" className="button-accent">
-                <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                <MessageCircle className="h-4 w-4" aria-hidden="true" />
                 Contact
             </Link>
         </div>
-    )
+    );
 }
 
-export default HeaderCTA
+export default HeaderCTA;

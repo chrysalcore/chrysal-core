@@ -15,9 +15,7 @@ export default function DeferredAnalytics({ gaId }: { gaId?: string }) {
         const load = () => setShouldLoad(true);
         const timeout = setTimeout(load, FALLBACK_DELAY_MS);
 
-        INTERACTION_EVENTS.forEach((event) =>
-            window.addEventListener(event, load, { once: true, passive: true }),
-        );
+        INTERACTION_EVENTS.forEach((event) => window.addEventListener(event, load, { once: true, passive: true }));
 
         return () => {
             clearTimeout(timeout);

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
-        <section className="flex flex-row flex-wrap items-start gap-4 py-32 lg:py-40 px-4 lg:px-[15dvw] bg-fade-band-left">
+        <section className="bg-fade-band-left flex flex-row flex-wrap items-start gap-4 px-4 py-32 lg:px-[15dvw] lg:py-40">
             <ContactInfo>
                 <SectionHeader {...sections.contact} alignStart />
             </ContactInfo>

@@ -1,21 +1,21 @@
 export type NavItem = {
     href: string;
     text: string;
-}
+};
 
 const data: NavItem[] = [
     {
         href: '/',
-        text: 'Home'
+        text: 'Home',
     },
     {
         href: '/projects',
-        text: 'Portfolio'
+        text: 'Portfolio',
     },
     {
         href: '/contact',
-        text: 'Contact'
-    }
-]
+        text: 'Contact',
+    },
+];
 
-export default data
+export default data;

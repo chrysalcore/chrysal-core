@@ -1,7 +1,9 @@
 function Title() {
     return (
-        <h1 className="font-semibold text-5xl lg:text-7xl tracking-tight">Digital Presence for <strong className="text-highlight font-semibold">Local Businesses</strong></h1>
-    )
+        <h1 className="text-5xl font-semibold tracking-tight lg:text-7xl">
+            Digital Presence for <strong className="font-semibold text-highlight">Local Businesses</strong>
+        </h1>
+    );
 }
 
-export default Title
+export default Title;

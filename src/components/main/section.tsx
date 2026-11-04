@@ -9,7 +9,8 @@ const sectionClasses: Record<Section, string> = {
     process: 'flex flex-col items-stretch gap-20 py-32 lg:py-40 px-4 lg:px-[15dvw] overflow-x-clip bg-fade-band-right',
     projects: 'flex flex-col items-center gap-20 py-32 lg:py-40 overflow-x-clip backdrop-blur-sm bg-fade-band',
     faq: 'flex flex-col items-stretch gap-20 py-32 lg:py-40 px-4 lg:px-[15dvw] bg-fade-band-left',
-    contact: 'flex flex-col items-center gap-20 py-32 lg:py-40 px-4 lg:px-[15dvw] bg-linear-to-b from-page via-page/13 to-page',
+    contact:
+        'flex flex-col items-center gap-20 py-32 lg:py-40 px-4 lg:px-[15dvw] bg-linear-to-b from-page via-page/13 to-page',
 };
 
 function Section({ children, type }: { children: React.ReactNode; type: Section }) {
@@ -18,7 +19,7 @@ function Section({ children, type }: { children: React.ReactNode; type: Section 
             <SectionHeader {...sections[type]} />
             {children}
         </section>
-    )
+    );
 }
 
 export default Section;

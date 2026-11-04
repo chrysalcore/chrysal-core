@@ -4,14 +4,14 @@ import HeroCTA from './hero-cta';
 
 function Hero() {
     return (
-        <section className="flex items-center min-h-dvh p-4 lg:px-[10dvw] bg-fade-hero">
-            <section className="flex flex-col justify-center items-start gap-8 max-w-3xl h-140">
+        <section className="bg-fade-hero flex min-h-dvh items-center p-4 lg:px-[10dvw]">
+            <section className="flex h-140 max-w-3xl flex-col items-start justify-center gap-8">
                 <Title />
                 <Slogan />
                 <HeroCTA />
             </section>
         </section>
-    )
+    );
 }
 
 export default Hero;

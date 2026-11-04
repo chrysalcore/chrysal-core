@@ -1,19 +1,14 @@
 export type Service = {
-    img: string
-    name: string
-    chars: string[]
-}
+    img: string;
+    name: string;
+    chars: string[];
+};
 
 const data: Service[] = [
     {
         img: 'service-landing.webp',
         name: 'High-Converting Landing Pages',
-        chars: [
-            '7-day delivery guaranteed',
-            'Local SEO optimized',
-            'Mobile-first design',
-            'Contact form integration'
-        ]
+        chars: ['7-day delivery guaranteed', 'Local SEO optimized', 'Mobile-first design', 'Contact form integration'],
     },
     {
         img: 'service-website.webp',
@@ -22,9 +17,9 @@ const data: Service[] = [
             '14-day delivery guaranteed',
             'Business-specific features',
             'Up to 6 custom pages',
-            'Ongoing support available'
-        ]
-    }
-]
+            'Ongoing support available',
+        ],
+    },
+];
 
-export default data
+export default data;

@@ -20,12 +20,12 @@ export default function Form() {
 
     const fixedData = useMemo(
         () =>
-        formData.map((input) => ({
-            ...input,
-            state: fields[input.name as keyof FormState],
-            onChange: (value: string) => setFields((current) => ({ ...current, [input.name]: value })),
-        })),
-        [fields]
+            formData.map((input) => ({
+                ...input,
+                state: fields[input.name as keyof FormState],
+                onChange: (value: string) => setFields((current) => ({ ...current, [input.name]: value })),
+            })),
+        [fields],
     );
 
     const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -39,14 +39,17 @@ export default function Form() {
     };
 
     return (
-        <form className="grow shrink-0 basis-[min(15rem,100%)] flex flex-col gap-4 p-4 bg-surface rounded-lg" onSubmit={onSubmit}>
-        {fixedData.map((item) => (
-            <Field {...item} key={item.name} />
-        ))}
-        <button className="button-accent" type="submit">
-            <Send className="w-4 h-4" aria-hidden="true" />
-            Submit
-        </button>
+        <form
+            className="flex shrink-0 grow basis-[min(15rem,100%)] flex-col gap-4 rounded-lg bg-surface p-4"
+            onSubmit={onSubmit}
+        >
+            {fixedData.map((item) => (
+                <Field {...item} key={item.name} />
+            ))}
+            <button className="button-accent" type="submit">
+                <Send className="h-4 w-4" aria-hidden="true" />
+                Submit
+            </button>
         </form>
     );
 }

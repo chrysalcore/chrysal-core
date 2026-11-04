@@ -1,14 +1,16 @@
-import { type ProcessStep } from '../../_lib/data/process'
+import { type ProcessStep } from '../../_lib/data/process';
 
 export default function Step({ step, name, desc, days }: ProcessStep) {
     return (
-        <div className="animate-[fade-step_10s_linear_both] flex flex-col items-start gap-4 p-6 min-w-[min(20rem,100%)] bg-surface/50 backdrop-blur-sm rounded-lg shadow-card">
-            <strong className="flex justify-center items-center w-12 h-12 text-on-accent text-2xl bg-accent rounded-full">{step}</strong>
+        <div className="shadow-card flex min-w-[min(20rem,100%)] animate-[fade-step_10s_linear_both] flex-col items-start gap-4 rounded-lg bg-surface/50 p-6 backdrop-blur-sm">
+            <strong className="flex h-12 w-12 items-center justify-center rounded-full bg-accent text-2xl text-on-accent">
+                {step}
+            </strong>
             <div className="flex flex-col gap-2">
-                <h3 className="text-accent text-lg font-medium">{name}</h3>
+                <h3 className="text-lg font-medium text-accent">{name}</h3>
                 <p>{desc}</p>
             </div>
-            <p className="text-highlight text-sm uppercase tracking-widest">Day/s {days}</p>
+            <p className="text-sm tracking-widest text-highlight uppercase">Day/s {days}</p>
         </div>
     );
 }

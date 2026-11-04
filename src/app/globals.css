@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme inline {
   --color-*: initial;
@@ -18,7 +18,10 @@
 }
 
 @layer base {
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     font-family: var(--font-heading);
   }
 }
@@ -29,7 +32,9 @@ html {
 
 body {
   color: var(--color-ink);
-  background: linear-gradient(var(--color-page), color-mix(in srgb, var(--color-page) 27%, transparent), var(--color-page)), url('/imgs/bg-small-hero.webp');
+  background:
+    linear-gradient(var(--color-page), color-mix(in srgb, var(--color-page) 27%, transparent), var(--color-page)),
+    url('/imgs/bg-small-hero.webp');
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -37,7 +42,9 @@ body {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-image: linear-gradient(var(--color-page), color-mix(in srgb, var(--color-page) 27%, transparent), var(--color-page)), url('/imgs/bg-big-hero.webp');
+    background-image:
+      linear-gradient(var(--color-page), color-mix(in srgb, var(--color-page) 27%, transparent), var(--color-page)),
+      url('/imgs/bg-big-hero.webp');
   }
 }
 
@@ -50,29 +57,59 @@ body {
 }
 
 .bg-fade-band-right {
-  background-image: linear-gradient(var(--color-band), transparent, var(--color-band)), linear-gradient(to right, var(--color-band), var(--color-divider));
+  background-image:
+    linear-gradient(var(--color-band), transparent, var(--color-band)),
+    linear-gradient(to right, var(--color-band), var(--color-divider));
 }
 
 .bg-fade-band-left {
-  background-image: linear-gradient(var(--color-band), transparent, var(--color-band)), linear-gradient(to left, var(--color-band), var(--color-divider));
+  background-image:
+    linear-gradient(var(--color-band), transparent, var(--color-band)),
+    linear-gradient(to left, var(--color-band), var(--color-divider));
 }
 
 .bg-fade-band-right-dark {
-  background-image: linear-gradient(var(--color-band), transparent, var(--color-band)), linear-gradient(to right, var(--color-band), var(--color-surface));
+  background-image:
+    linear-gradient(var(--color-band), transparent, var(--color-band)),
+    linear-gradient(to right, var(--color-band), var(--color-surface));
 }
 
 @keyframes fade {
-  0% { transform: translateX(15rem); opacity: 0; }
-  5% { transform: translateX(0); opacity: 1; }
-  95% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(-15rem); opacity: 0; }
+  0% {
+    transform: translateX(15rem);
+    opacity: 0;
+  }
+  5% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-15rem);
+    opacity: 0;
+  }
 }
 
 @keyframes fade-step {
-  0% { transform: translateX(15rem); opacity: 0; }
-  10% { transform: translateX(0); opacity: 1; }
-  90% { transform: translateX(0); opacity: 1; }
-  100% { transform: translateX(-15rem); opacity: 0; }
+  0% {
+    transform: translateX(15rem);
+    opacity: 0;
+  }
+  10% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-15rem);
+    opacity: 0;
+  }
 }
 
 .shadow-card {
