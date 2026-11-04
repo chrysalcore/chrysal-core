@@ -16,7 +16,7 @@ export default function ContactPage() {
     return (
         <section className="flex flex-row flex-wrap items-start gap-4 py-24 px-4 lg:px-[15dvw] bg-fade-band-left">
             <ContactInfo>
-                <SectionHeader {...sections.contact} />
+                <SectionHeader {...sections.contact} alignStart />
             </ContactInfo>
             <Form />
         </section>

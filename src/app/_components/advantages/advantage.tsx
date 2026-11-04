@@ -5,7 +5,7 @@ export default function Advantage({ icon, title, desc }: Advantage) {
         <li className="grow shrink-0 basis-[min(20rem,100%)] flex items-center gap-6 p-4 text-left even:flex-row-reverse even:text-right bg-surface rounded-lg shadow-card">
             <div className="w-16 h-16 shrink-0 fill-accent">{icon}</div>
             <div className='flex flex-col gap-2'>
-                <h3 className='text-accent font-bold'>{title}</h3>
+                <h3 className='text-accent font-medium'>{title}</h3>
                 <p className='text-sm'>{desc}</p>
             </div>
         </li>

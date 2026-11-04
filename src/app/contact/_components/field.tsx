@@ -3,7 +3,7 @@ import { type Field } from '@/app/contact/_lib/data/fields';
 export default function Field({ label, name, type, placeholder, value, state, onChange }: Field & { state: string; onChange: (value: string) => void }) {
     return (
         <label className="flex flex-col gap-2" htmlFor={name}>
-        <span className="text-accent text-base font-semibold">{label}</span>
+        <span className="text-sm font-medium">{label}</span>
         {type === 'option' ? (
             <select className="py-3 px-4 text-base bg-control rounded border border-ink/40" name={name} id={name} value={state} onChange={(event) => onChange(event.target.value)}>
             {(value as string[]).map((val) => (

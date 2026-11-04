@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Work_Sans, Montserrat } from "next/font/google";
+import { Work_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 import { siteUrl } from "@/lib/site";
@@ -17,9 +17,9 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
 });
 
-const montserrat = Montserrat({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-montserrat",
+  variable: "--font-space-grotesk",
 });
 
 const title = "Chrysal Core: Digital Presence for Local Business";
@@ -67,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${workSans.variable} ${montserrat.variable}`}
+      className={`h-full antialiased ${workSans.variable} ${spaceGrotesk.variable}`}
       data-scroll-behavior="smooth"
     >
       <body className="min-h-full flex flex-col">
