@@ -10,7 +10,7 @@ export default function NavLink({ href, text }: NavItem) {
 
     return (
         <li>
-            <Link href={href} className={`text-xs uppercase tracking-[0.2rem] transition-all ${isActive ? 'text-primary font-semibold' : ''}`}>{text}</Link>
+            <Link href={href} className={`text-xs uppercase tracking-[0.2rem] transition-all ${isActive ? 'text-accent font-semibold' : ''}`}>{text}</Link>
         </li>
     );
 }

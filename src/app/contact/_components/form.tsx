@@ -38,11 +38,11 @@ export default function Form() {
     };
 
     return (
-        <form className="grow shrink-0 basis-[min(15rem,100%)] flex flex-col gap-4 p-4 bg-dark rounded-lg" onSubmit={onSubmit}>
+        <form className="grow shrink-0 basis-[min(15rem,100%)] flex flex-col gap-4 p-4 bg-surface rounded-lg" onSubmit={onSubmit}>
         {fixedData.map((item) => (
             <Field {...item} key={item.name} />
         ))}
-        <button className="py-2 px-8 text-sm font-semibold uppercase tracking-widest text-domain bg-cta rounded" type="submit">
+        <button className="button-accent" type="submit">
             Submit
         </button>
         </form>

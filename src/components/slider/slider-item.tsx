@@ -1,7 +1,7 @@
 function SliderItem({ selected }: { selected: boolean }) {
     return (
         <svg
-            className={`h-4 w-4 transition-all duration-100 ${selected ? 'scale-100 fill-cta' : 'scale-75 fill-[#ffa80066]'}`}
+            className={`h-4 w-4 transition-all duration-100 ${selected ? 'scale-100 fill-highlight' : 'scale-75 fill-highlight/40'}`}
             width="77.450356mm"
             height="77.450371mm"
             viewBox="0 0 77.450356 77.450371"

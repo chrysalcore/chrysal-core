@@ -3,8 +3,8 @@ import { type FAQItem } from '@/app/_lib/data/faqs';
 
 export default function FAQItem({ id, question, answer, isActive, onSelect }: FAQItem & { isActive: boolean; onSelect: (id: number) => void }) {
     return (
-    <li className="shrink-0 grow-0 basis-[min(18rem,100%)] flex flex-col gap-6 p-4 max-w-80 bg-dark rounded-lg shadow-card relative">
-        <button className="self-stretch w-[90%] text-cta text-base text-left bg-transparent border-none" onClick={() => onSelect(id)}>
+    <li className="shrink-0 grow-0 basis-[min(18rem,100%)] flex flex-col gap-6 p-4 max-w-80 bg-surface rounded-lg shadow-card relative">
+        <button className="self-stretch w-[90%] text-highlight text-base text-left bg-transparent border-none" onClick={() => onSelect(id)}>
             {question}
         </button>
         <Image
@@ -14,7 +14,7 @@ export default function FAQItem({ id, question, answer, isActive, onSelect }: FA
             width={16}
             height={16}
         />
-        <p className={`text-light text-sm overflow-y-clip transition-[max-height] duration-500 ${isActive ? 'max-h-40' : 'max-h-0'}`}>{answer}</p>
+        <p className={`text-muted text-sm overflow-y-clip transition-[max-height] duration-500 ${isActive ? 'max-h-40' : 'max-h-0'}`}>{answer}</p>
     </li>
     );
 }

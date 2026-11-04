@@ -6,10 +6,10 @@ type ContactInfoItem = (typeof data)[number];
 function ContactItem({ icon, name, text, href }: ContactInfoItem) {
     return (
         <li className="grow shrink-0 basis-[min(12rem,100%)] flex gap-2">
-            <div className="w-12 h-12 p-3 bg-primary rounded fill-domain">{icon}</div>
+            <div className="w-12 h-12 p-3 bg-accent rounded fill-on-accent">{icon}</div>
             <Link href={href} rel="noopener noreferrer" target="_blank">
                 <h3 className="text-base font-bold">{name}</h3>
-                <p className="text-primary text-sm">{text}</p>
+                <p className="text-accent text-sm">{text}</p>
             </Link>
         </li>
     );
