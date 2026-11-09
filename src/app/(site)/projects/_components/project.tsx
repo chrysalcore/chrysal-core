@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { type Project } from '../_lib/data/projects';
 
-export default function Project({ img, icon, name, desc, href }: Project) {
+export default function Project({ img, icon, name, desc, href, kind }: Project) {
     return (
         <li className="shadow-card flex max-w-[min(20rem,95dvw)] shrink-0 grow-0 basis-[min(20rem,95dvw)] snap-center flex-col gap-4 overflow-clip rounded-lg bg-surface text-left">
             <Image
@@ -30,7 +30,7 @@ export default function Project({ img, icon, name, desc, href }: Project) {
                     <h3 className="truncate text-lg font-medium">{name}</h3>
                 </header>
                 <p className="line-clamp-6">{desc}</p>
-                {href !== '' ? (
+                {kind !== 'index' ? (
                     <Link
                         className="absolute bottom-4 left-4 button-accent"
                         href={href}
@@ -41,7 +41,7 @@ export default function Project({ img, icon, name, desc, href }: Project) {
                         <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
                 ) : (
-                    <Link className="absolute bottom-4 left-4 button-accent" href="/projects">
+                    <Link className="absolute bottom-4 left-4 button-accent" href={href}>
                         Visit
                         <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </Link>

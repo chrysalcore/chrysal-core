@@ -19,7 +19,7 @@ export default function Home() {
                 <ServicesList />
             </Section>
             <Section type="projects">
-                <ProjectsList end={4} />
+                <ProjectsList kinds={['live', 'index']} />
             </Section>
             <Section type="process">
                 <ProcessSteps />

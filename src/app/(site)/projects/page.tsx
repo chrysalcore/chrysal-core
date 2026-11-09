@@ -20,13 +20,13 @@ function Projects() {
                     <h3 className="w-4/5 self-center border-b border-divider p-4 text-2xl font-medium text-accent">
                         Live Webs
                     </h3>
-                    <ProjectsList end={3} />
+                    <ProjectsList kinds={['live']} />
                 </li>
                 <li className="flex flex-col gap-8">
                     <h3 className="w-4/5 self-center border-b border-divider p-4 text-2xl font-medium text-accent">
                         Templates
                     </h3>
-                    <ProjectsList init={4} />
+                    <ProjectsList kinds={['template']} />
                 </li>
             </ul>
         </section>
