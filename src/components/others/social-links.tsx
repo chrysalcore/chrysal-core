@@ -1,17 +1,17 @@
-import contactInfo from '@/lib/data/contactInfo'
+import contactInfo from '@/lib/data/contactInfo';
 
 function SocialLinks() {
     return (
-        <ul className="grow shrink-0 basis-[min(15rem,100%)] flex justify-center items-center gap-12 py-4 px-2 bg-domain">
+        <ul className="flex shrink-0 grow basis-[min(15rem,100%)] items-center justify-center gap-12 bg-band px-2 py-4">
             {contactInfo.map((item) => (
-                <li key={item.name} className="w-6 h-6 fill-primary stroke-0">
+                <li key={item.name} className="h-6 w-6 fill-accent text-accent">
                     <a href={item.href} aria-label={item.name} target="_blank" rel="noopener noreferrer">
                         {item.icon}
                     </a>
                 </li>
             ))}
         </ul>
-    )
+    );
 }
 
-export default SocialLinks
+export default SocialLinks;

@@ -1,7 +1,9 @@
 function Slogan() {
     return (
-        <h2 className="tracking-widest">Fast, affordable websites built with modern technology to help local businesses thrive online</h2>
-    )
+        <p className="max-w-xl text-muted">
+            Fast, affordable websites built with modern technology to help local businesses thrive online
+        </p>
+    );
 }
 
-export default Slogan
+export default Slogan;

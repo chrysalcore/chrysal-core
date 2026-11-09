@@ -7,7 +7,7 @@ function SlidersList({ current, size }: { current: number; size: number }) {
                 <SliderItem selected={i === current} key={i} />
             ))}
         </div>
-    )
+    );
 }
 
-export default SlidersList
+export default SlidersList;
